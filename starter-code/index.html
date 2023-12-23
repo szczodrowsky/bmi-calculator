@@ -31,7 +31,11 @@
           </svg>
         </picture>
         <div class="container-heading">
-          <h1 class="bmi-tittle">Body Mass Index Calculator</h1>
+          <h1 class="bmi-tittle">
+            Body Mass
+            <br />
+            Index Calculator
+          </h1>
           <p class="bmi-describe">
             Better understand your weight in relation to your height using our
             body mass index (BM) calculator. While BMI is not the sole
@@ -42,42 +46,62 @@
       </div>
       <div class="bmi-main">
         <h2 class="tittle-main">Enter your details below</h2>
-        <div class="bmi-options">
+        <div class="bmi-options" id="bmi-options">
           <div class="option">
-            <input type="radio" id="metric" class="radio" />
-            <label class="label_name" for="metric"> Metric</label>
+            <input type="radio" id="metricBtn" class="radio" name="metric" />
+            <label class="label_name" for="metricBtn"> Metric</label>
           </div>
           <div class="option">
-            <input type="radio" id="imperial" class="radio" />
-            <label class="label_name" for="imperial">Imperial</label>
+            <input type="radio" id="imperialBtn" class="radio" name="imper" />
+            <label class="label_name" for="imperialBtn">Imperial</label>
           </div>
         </div>
-        <div class="bmi-inputs metrical">
+        <div class="bmi-inputs metrical" id="metrical">
           <div class="input-value">
             <p class="input-name">Height</p>
             <div class="flex-container">
-              <input class="input" type="number" id="height" />
+              <input
+                class="input"
+                type="number"
+                id="heightIn"
+                placeholder="0"
+              />
               <span class="unit">cm</span>
             </div>
           </div>
           <div class="input-value">
             <p class="input-name">Weight</p>
             <div class="flex-container">
-              <input class="input" type="number" id="weight" />
+              <input
+                class="input"
+                type="number"
+                id="weightIn"
+                placeholder="0"
+              />
               <span class="unit">kg</span>
             </div>
           </div>
         </div>
-        <div class="bmi-inputs imperial hide">
+        <div class="bmi-inputs imperial hide" id="imperial">
           <div class="input-value-imperials">
             <p class="input-name">Height</p>
             <div class="imperial-inputs">
               <div class="flex-container-imperials">
-                <input class="input" type="number" id="heightFT" />
+                <input
+                  class="input"
+                  type="number"
+                  id="heightFT"
+                  placeholder="0"
+                />
                 <span class="unit">ft</span>
               </div>
               <div class="flex-container-imperials">
-                <input class="input" type="number" id="heightIN" />
+                <input
+                  class="input"
+                  type="number"
+                  id="heightIN"
+                  placeholder="0"
+                />
                 <span class="unit">in</span>
               </div>
             </div>
@@ -98,31 +122,34 @@
         </div>
         <div class="result">
           <div class="result-number">
-            <p class="result-name">Your BMI is...</p>
-            <span class="result-score">23.4</span>
+            <p class="result-name" id="resultName">Welcome</p>
+            <span class="result-score" id="result-score"></span>
           </div>
-          <p class="result-describe">
-            Your BMI suggests you’re a healthy weight. Your ideal weight is
-            between <span>63.3kgs - 85.2kgs.</span>
+          <p class="result-describe" id="result-describe">
+            Enter your height and weight and you’ll see your BMI result here
+            <span id="range-bmi">...</span>
           </p>
         </div>
       </div>
-      <picture class="eating-picture">
-        <img
-          src="./assets/images/image-man-eating.webp"
-          alt="image-man-eating"
-        />
-      </picture>
-      <div class="bmi-meaning">
-        <h3 class="h3-tittle">What your BMI result means</h3>
-        <p class="meaning-describe">
-          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
-          Maintaining a healthy weight may lower your chances of experiencing
-          health issues later on, such as obesity and type 2 diabetes. Aim for a
-          nutritious diet with reduced fat and sugar content, incorporating
-          ample fruits and vegetables. Additionally, strive for regular physical
-          activity, ideally about 30 minutes daily for five days a week.
-        </p>
+      <div class="hero">
+        <picture class="eating-picture">
+          <img
+            src="./assets/images/image-man-eating.webp"
+            alt="image-man-eating"
+          />
+        </picture>
+        <div class="bmi-meaning">
+          <h3 class="h3-tittle">What your BMI result means</h3>
+          <p class="meaning-describe">
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+            Maintaining a healthy weight may lower your chances of experiencing
+            health issues later on, such as obesity and type 2 diabetes. Aim for
+            a nutritious diet with reduced fat and sugar content, incorporating
+            ample fruits and vegetables. Additionally, strive for regular
+            physical activity, ideally about 30 minutes daily for five days a
+            week.
+          </p>
+        </div>
       </div>
       <div class="icons-flex-container">
         <div class="describe-icon">
@@ -314,5 +341,6 @@
         </div>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
